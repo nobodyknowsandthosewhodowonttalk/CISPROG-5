@@ -1,0 +1,17 @@
+#Below is code that is not functional. I'm having issues with is and anyone who would like to commit, please contact or message me so I can have you modify my files.
+
+picnic="novalue"
+budget="novalue"
+#The two variables above are declared as no value at the moment because without them being declared they give a 'not defined' error.
+#I made it string instead of an integer or float as I want string to read so it can exit the loop with Enter or no input shown as ""
+
+while True: #will loop the question till the proper input then breaks after getting proper input
+  try: #I'm using this because it checks if the input is a float value which I want it to be stored as and anything other than a float will give the error "Not Valid!" to loop with the while and try for input again.
+    budget = float(input("Enter budget, Enter to quit: ") #**I've tried to remove float from the line of code, however doing so allows "EOP" to print with either "hi" or "" as the Enter key
+    break #Once it accepts the input, it leaves the while loop and prints "EOP"
+  except: #I have entered string values such as "hi" and even "" as the Enter Key. Each time I get "Not Valid!" so it doesn't notice the input of the Enter Key
+    if budget == "": #I added an if statement to break if budget reads "" as the Enter key.
+      break
+    else: #I added an else statement to not allow any other strings to be used and loop back for another chance at the input
+      print("Not valid!")
+print("EOP") #This is what should print when I enter a float input or the "" as Enter key input and it only works when I enter a float or with **changed code entering any string.
